@@ -1,8 +1,12 @@
 import "@styles/Header.scss";
+import ThemeSwitch from "@components/ThemeSwitch";
+
 export default function Header() {
 	return (
 		<header className="header">
-			<div className="logo">brandname</div>
+			<div className="logo">
+				<h1>Meister</h1>
+			</div>
 			<div className="links">
 				<a href="">Link1</a>
 				<a href="">Link2</a>
@@ -10,7 +14,7 @@ export default function Header() {
 				<a href="">Link4</a>
 			</div>
 			<div className="control">
-				<div>Theme</div>
+				<ThemeSwitch />
 				<div>Language</div>
 			</div>
 		</header>

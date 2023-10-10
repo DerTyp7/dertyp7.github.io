@@ -20,15 +20,15 @@
 		a {
 			margin-left: 1rem;
 			text-decoration: none;
-			color: #323232;
+			color: var(--color-font-link-header);
 			font-weight: 600;
 			font-size: 1.2rem;
 			transition: all 0.1s ease-in-out;
-			border-bottom: 3px solid transparent;
+			border-bottom: 3px solid var(--color-font-link-header);
 
 			&:hover {
-				color: #000000;
-				border-color: #000000;
+				color: var(--color-font-link-header-hover);
+				border-color: var(--color-font-link-header-hover);
 			}
 		}
 	}

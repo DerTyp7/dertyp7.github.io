@@ -1,4 +1,7 @@
 #app {
 	display: flex;
 	flex-direction: column;
+	background-color: var(--color-background-body);
+	min-height: auto;
+	flex: 1;
 }
