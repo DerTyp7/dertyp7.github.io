@@ -6,6 +6,7 @@ function Logo() {
 		<div className="logo">
 			<p>Janis</p>
 			<p>Meister</p>
+			<p className="tooltip">"DerTyp7"</p>
 		</div>
 	);
 }
