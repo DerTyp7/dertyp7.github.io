@@ -24,11 +24,11 @@
 			font-weight: 600;
 			font-size: 1.2rem;
 			transition: all 0.1s ease-in-out;
-			border-bottom: 3px solid var(--color-font-link-header);
+			border-bottom: 3px solid var(--color-border-link-header);
 
 			&:hover {
 				color: var(--color-font-link-header-hover);
-				border-color: var(--color-font-link-header-hover);
+				border-color: var(--color-border-link-header-hover);
 			}
 		}
 	}
