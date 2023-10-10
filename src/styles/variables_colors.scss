@@ -6,11 +6,11 @@
 	--color-background-header: transparent;
 
 	--color-font: #000000;
-	--color-font-link-header: #323232;
-	--color-font-link-header-hover: #000000;
+	--color-font-link-header: #1c1c1c;
+	--color-font-link-header-hover: #000;
 
 	--color-border-link-header: transparent;
-	--color-border-link-header-hover: #000000;
+	--color-border-link-header-hover: var(--color-accent);
 
 	--color-danger: #cf000f;
 	--color-success: #009944;
@@ -19,9 +19,9 @@
 
 	--color-svg-header: #363636;
 
-	--color-accent: #2294ff;
+	--color-accent: #22eb97;
 	--color-font-link: var(--color-accent);
-	--color-font-link-hover: #0966be;
+	--color-font-link-hover: #7dffc9;
 
 	.theme-dark {
 		--color-background-body: #1a1818;
