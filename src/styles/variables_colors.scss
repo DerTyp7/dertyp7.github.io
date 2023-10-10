@@ -1,0 +1,31 @@
+:root {
+	/*! By default colors are in LIGHT mode */
+	/* Colors: General */
+
+	--color-background-body: #ffffff;
+	--color-background-header: transparent;
+
+	--color-font: #000000;
+	--color-font-link-header: #323232;
+	--color-font-link-header-hover: #000000;
+
+	--color-border-link-header: transparent;
+	--color-border-link-header-hover: #000000;
+
+	--color-danger: #cf000f;
+	--color-success: #009944;
+	--color-info: #63c0df;
+	--color-warning: #f0541e;
+
+	--color-svg-header: #363636;
+
+	--color-accent: #2294ff;
+	--color-font-link: var(--color-accent);
+	--color-font-link-hover: #0966be;
+
+	.theme-dark {
+		--color-background-body: #1a1818;
+		--color-background-header: transparent;
+		--color-font: #fff;
+	}
+}
