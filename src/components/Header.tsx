@@ -1,24 +1,35 @@
 import "@styles/Header.scss";
 import ThemeSwitch from "@components/ThemeSwitch";
 
+function Logo() {
+	return (
+		<div className="logo">
+			<p>Janis</p>
+			<p>Meister</p>
+		</div>
+	);
+}
+
+function Control() {
+	return (
+		<div className="control">
+			<ThemeSwitch />
+			<div>Language</div>
+		</div>
+	);
+}
+
 export default function Header() {
 	return (
 		<header className="header">
 			{/* Mobile Top Row Header */}
 			<div className="header-mobile">
-				<div className="logo">
-					<h1>Meister</h1>
-				</div>
-				<div className="control">
-					<ThemeSwitch />
-					<div>Language</div>
-				</div>
+				<Logo />
+				<Control />
 			</div>
 			{/* END: Mobile Top Row Header */}
 
-			<div className="logo">
-				<h1>Meister</h1>
-			</div>
+			<Logo />
 
 			<div className="links">
 				<a href="">About</a>
@@ -26,10 +37,7 @@ export default function Header() {
 				<a href="">Projects</a>
 				<a href="">Contact</a>
 			</div>
-			<div className="control">
-				<ThemeSwitch />
-				<div>Language</div>
-			</div>
+			<Control />
 		</header>
 	);
 }

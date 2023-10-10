@@ -8,6 +8,16 @@
 
 	.logo {
 		flex: 0.5;
+
+		p {
+			font-size: 2rem;
+			line-height: 0.8;
+		}
+
+		p:nth-child(2) {
+			padding-left: 20px;
+			font-weight: bold;
+		}
 	}
 
 	.links {
@@ -48,7 +58,7 @@
 		flex-direction: row;
 
 		.logo {
-			display: flex;
+			display: block;
 		}
 
 		.control {
@@ -78,6 +88,9 @@
 			flex-direction: column;
 			.logo {
 				justify-content: center;
+				display: flex;
+
+				margin-bottom: 10px;
 			}
 
 			.control {
