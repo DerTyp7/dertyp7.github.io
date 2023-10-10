@@ -8,10 +8,10 @@ export default function Header() {
 				<h1>Meister</h1>
 			</div>
 			<div className="links">
-				<a href="">Link1</a>
-				<a href="">Link2</a>
-				<a href="">Link3</a>
-				<a href="">Link4</a>
+				<a href="">About</a>
+				<a href="">Skills</a>
+				<a href="">Projects</a>
+				<a href="">Contact</a>
 			</div>
 			<div className="control">
 				<ThemeSwitch />
