@@ -6,8 +6,8 @@ export default function About() {
 			<div className="text">
 				<div className="badge">Hey There! I'm Janis Meister</div>
 				<h1>
-					A software <span>developer</span>. I develop and plan
-					<span> software</span> solutions.
+					A software <span>developer</span>. I develop and plan&nbsp;
+					<span>software</span> solutions.
 				</h1>
 				<p>
 					Over 3 years of experience in software development. I have worked on a
