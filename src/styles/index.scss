@@ -89,6 +89,10 @@ body,
 }
 
 ::-webkit-scrollbar-thumb {
-	background: var(--color-accent);
+	background: var(--color-accent-background);
 	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--color-accent);
 }
