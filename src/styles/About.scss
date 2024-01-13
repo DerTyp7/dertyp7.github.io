@@ -1,0 +1,36 @@
+.about {
+	padding: 5rem 10rem;
+	.greeting {
+		color: var(--color-accent);
+	}
+	.interest {
+		color: var(--color-font-muted);
+	}
+
+	.social-links {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-top: 2rem;
+		gap: 2rem;
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 5px;
+			color: var(--color-font);
+			text-decoration: none;
+			font-size: 1.2rem;
+			font-weight: 500;
+			border-radius: 5px;
+			padding: 10px 15px;
+			background-color: #1d1d1d;
+			transition: all 50ms ease-in-out;
+			border: 2px solid transparent;
+			&:hover {
+				background-color: #2d2d2d;
+				border-color: var(--color-accent);
+			}
+		}
+	}
+}
