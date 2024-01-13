@@ -3,6 +3,8 @@ import "@styles/App.scss";
 import Header from "@components/Header";
 import About from "@components/About";
 import ScrollToTop from "@components/ScrollToTop";
+import Skills from "@components/Skills";
+import SectionLine from "@components/SectionLine";
 
 export default function App() {
 	const aboutRef = useRef(null);
@@ -45,13 +47,16 @@ export default function App() {
 				<About />
 			</div>
 
+			<SectionLine />
 			<div id="skills" ref={skillsRef}>
-				<h4>Skills</h4>
+				<Skills />
 			</div>
+			<SectionLine />
 
 			<div id="projects" ref={projectsRef} style={{ textAlign: "center" }}>
 				<h4>Projects</h4>
 			</div>
+
 			<h4>Website under construction 🚧👷</h4>
 			<ScrollToTop />
 		</div>
