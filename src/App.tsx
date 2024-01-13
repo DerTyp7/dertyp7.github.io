@@ -12,10 +12,12 @@ export default function App() {
 			<Header />
 			<About />
 			<div id="skills">
-				<h2>
+				<h4>
 					<a href="#skills">Skills</a>
-				</h2>
-				{/* Add your skills content here */}
+				</h4>
+				<h4>
+					<a href="#projects">Projects</a>
+				</h4>
 			</div>
 			<ScrollToTop />
 		</div>
