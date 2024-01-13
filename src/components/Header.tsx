@@ -2,10 +2,12 @@ import "@styles/Header.scss";
 import { useState, useEffect } from "react";
 import Burger from "@components/Burger";
 import Sidebar from "@components/Sidebar";
+import { useLocation } from "react-router-dom";
 
 export default function Header() {
 	const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
 	const [isOpen, setIsOpen] = useState(false);
+	const location = useLocation();
 
 	const toggleSidebar = () => setIsOpen(!isOpen);
 
@@ -27,16 +29,33 @@ export default function Header() {
 
 			{isSmallScreen ? (
 				<>
-					<Burger onClick={toggleSidebar} />
+					<Burger isOpen={isOpen} onClick={toggleSidebar} />
 					<Sidebar isOpen={isOpen} toggle={toggleSidebar} />
 				</>
 			) : (
 				<nav>
-					<a className="current" href="#">
+					<a
+						className={
+							location.pathname === "/about" || location.pathname === "/"
+								? "current"
+								: ""
+						}
+						href="#"
+					>
 						About
 					</a>
-					<a href="#skills">Skills</a>
-					<a href="#projects">Projects</a>
+					<a
+						className={location.pathname === "/skills" ? "current" : ""}
+						href="#skills"
+					>
+						Skills
+					</a>
+					<a
+						className={location.pathname === "/projects" ? "current" : ""}
+						href="#projects"
+					>
+						Projects
+					</a>
 				</nav>
 			)}
 		</div>
