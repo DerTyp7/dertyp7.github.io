@@ -5,7 +5,7 @@ export default function ScrollToTop() {
 	const [isScrolledUp, setIsScrolledUp] = useState(false);
 
 	const toggleVisibilityAndDirection = () => {
-		if (window.scrollY < 150) {
+		if (window.scrollY < 100) {
 			setIsScrolledUp(false);
 		} else {
 			setIsScrolledUp(window.scrollY === 0 ? false : true);
