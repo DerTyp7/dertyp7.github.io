@@ -11,7 +11,6 @@ export default function App() {
 			</div>
 			<Header />
 			<About />
-			<About />
 			<div id="skills">
 				<h2>
 					<a href="#skills">Skills</a>
