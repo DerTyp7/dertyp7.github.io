@@ -1,6 +1,7 @@
 import "@styles/App.scss";
 import Header from "@components/Header";
 import About from "@components/About";
+import ScrollToTop from "@components/ScrollToTop";
 
 export default function App() {
 	return (
@@ -10,6 +11,14 @@ export default function App() {
 			</div>
 			<Header />
 			<About />
+			<About />
+			<div id="skills">
+				<h2>
+					<a href="#skills">Skills</a>
+				</h2>
+				{/* Add your skills content here */}
+			</div>
+			<ScrollToTop />
 		</div>
 	);
 }
