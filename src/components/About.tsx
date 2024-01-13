@@ -7,7 +7,7 @@ export default function About() {
 			<h1 className="name">Janis Meister</h1>
 			<br />
 			<h3 className="job">Software Developer.</h3>
-			<h3 className="interest">With an interest for modern technology.</h3>
+			<h3 className="interest">With an interest for modern technologies.</h3>
 			<div className="social-links">
 				<a href="https://github.com/DerTyp7" target="_blank">
 					<svg
