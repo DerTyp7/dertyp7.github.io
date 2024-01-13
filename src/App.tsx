@@ -43,17 +43,23 @@ export default function App() {
 	return (
 		<div id="app">
 			<Header />
-			<div id="about" ref={aboutRef}>
+			<div id="about" className="section" ref={aboutRef}>
 				<About />
 			</div>
 
-			<SectionLine />
-			<div id="skills" ref={skillsRef}>
+			<div id="skills" className="section" ref={skillsRef}>
+				<SectionLine />
 				<Skills />
 			</div>
-			<SectionLine />
 
-			<div id="projects" ref={projectsRef} style={{ textAlign: "center" }}>
+			<div
+				id="projects"
+				className="section"
+				ref={projectsRef}
+				style={{ textAlign: "center" }}
+			>
+				<SectionLine />
+
 				<h4>Projects</h4>
 			</div>
 
