@@ -11,12 +11,22 @@
 			transform: rotate(0deg);
 
 			&:hover {
-				animation: pulseUp 1s infinite;
+				animation: pulseUp 1s 2;
+			}
+
+			@media screen and (min-width: 768px) {
+				&:hover {
+					animation: pulseUp 1s infinite;
+				}
 			}
 		}
 
 		&.down {
 			transform: rotate(-180deg);
+
+			&:hover {
+				animation: pulseDown 1s 2;
+			}
 
 			@media screen and (min-width: 768px) {
 				width: 50px;
@@ -24,10 +34,10 @@
 				position: fixed;
 				bottom: 15px;
 				right: 50%;
-			}
 
-			&:hover {
-				animation: pulseDown 1s infinite;
+				&:hover {
+					animation: pulseDown 1s infinite;
+				}
 			}
 		}
 	}
