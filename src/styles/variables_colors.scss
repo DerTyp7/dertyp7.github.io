@@ -8,6 +8,7 @@
 	--color-font-link-header: #1c1c1c;
 	--color-font-link-header-hover: #000;
 
+	--color-border: #1c1c1c;
 	--color-border-link-header: transparent;
 	--color-border-link-header-hover: var(--color-accent);
 
@@ -23,10 +24,4 @@
 
 	--color-font-link: var(--color-accent);
 	--color-font-link-hover: #7dffc9;
-
-	.theme-dark {
-		--color-background-body: #1a1818;
-		--color-background-header: transparent;
-		--color-font: #fff;
-	}
 }
