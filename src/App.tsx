@@ -4,6 +4,7 @@ import Header from "@components/Header";
 import About from "@components/About";
 import SectionScroll from "@components/SectionScroll";
 import Skills from "@components/Skills";
+import Projects from "@components/Projects";
 import SectionLine from "@components/SectionLine";
 
 export default function App() {
@@ -52,18 +53,11 @@ export default function App() {
 				<Skills />
 			</div>
 
-			<div
-				id="projects"
-				className="section"
-				ref={projectsRef}
-				style={{ textAlign: "center" }}
-			>
+			<div id="projects" className="section" ref={projectsRef}>
 				<SectionLine />
-
-				<h4>Projects</h4>
+				<Projects />
 			</div>
 
-			<h4>Website under construction 🚧👷</h4>
 			<SectionScroll sections={["", "skills", "projects"]} />
 		</div>
 	);
