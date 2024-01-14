@@ -68,7 +68,7 @@ export default function App() {
 			</div>
 
 			<h4>Website under construction 🚧👷</h4>
-			<SectionScroll sections={["about", "skills", "projects"]} />
+			<SectionScroll sections={["", "skills", "projects"]} />
 		</div>
 	);
 }

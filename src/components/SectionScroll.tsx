@@ -25,11 +25,7 @@ export default function SectionScroll({ sections }: { sections: string[] }) {
 		if (newIndex < 0) newIndex = sections.length - 1;
 		if (newIndex >= sections.length) newIndex = 0;
 
-		const sectionElement = document.getElementById(sections[newIndex]);
-		if (sectionElement) {
-			sectionElement.scrollIntoView({ behavior: "smooth" });
-		}
-
+		window.location.hash = sections[newIndex];
 		setCurrentSectionIndex(newIndex);
 	}
 
