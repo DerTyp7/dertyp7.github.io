@@ -21,6 +21,7 @@ export default function App() {
 	const aboutRef = useRef(null);
 	const skillsRef = useRef(null);
 	const projectsRef = useRef(null);
+	const sections = ["", "skills", "projects"];
 	const prevHash = useRef(window.location.hash);
 
 	useEffect(() => {
@@ -32,18 +33,21 @@ export default function App() {
 			(entries) => {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
-						//! WORKAROUND: Prevents the observer from firing when the user scrolls to over a section
-						//! needs improvement in the future
-						if (
-							(prevHash.current === "#projects" &&
-								window.location.hash === "") ||
-							(prevHash.current === "#projects" &&
-								window.location.hash === "#projects")
-						) {
+						// console.log("====================================");
+						// console.log(`Previous Hash: ${prevHash.current}`);
+						// console.log(`Current Hash: ${window.location.hash}`);
+						// console.log(`Target ID: ${entry.target.id}`);
+
+						const difference = Math.abs(
+							sections.indexOf(prevHash.current.replace("#", "")) -
+								sections.indexOf(window.location.hash.replace("#", ""))
+						);
+						// console.log(`Difference: ${difference}`);
+						if (difference > 1) {
+							prevHash.current = entry.target.id;
 							return;
 						}
-						prevHash.current = window.location.hash;
-						//! WORKAROUND END
+						prevHash.current = entry.target.id;
 						window.location.hash = entry.target.id;
 						entry.target.classList.add("active");
 
@@ -98,11 +102,7 @@ export default function App() {
 
 			<Footer />
 
-			{isMobileDevice() ? (
-				<JumpToTop />
-			) : (
-				<SectionScroll sections={["", "skills", "projects"]} />
-			)}
+			{isMobileDevice() ? <JumpToTop /> : <SectionScroll sections={sections} />}
 		</div>
 	);
 }
