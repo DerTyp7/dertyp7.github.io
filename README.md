@@ -1,12 +1,11 @@
 # dertyp7.github.io (Portfolio)
 
-Project for my portfolio website.
+My portfolio website.
 
 Project was created with:
 
-- [Vite@4.4.1](https://vitejs.dev/)
-- [NodeJS@18.17.1](https://nodejs.org/)
-- [ReactJS@18.2.0](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [ReactJS](https://react.dev/)
 
 ## Project setup
 
