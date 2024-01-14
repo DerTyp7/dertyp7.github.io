@@ -1,8 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "@styles/SectionScroll.scss";
 
 export default function SectionScroll({ sections }: { sections: string[] }) {
 	const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
+
+	useEffect(() => {
+		const hash = window.location.hash.substring(1);
+		const index = sections.indexOf(hash);
+		if (index !== -1) {
+			setCurrentSectionIndex(index);
+		}
+	}, []);
+
+	window.onhashchange = () => {
+		const hash = window.location.hash.substring(1);
+		const index = sections.indexOf(hash);
+		if (index !== -1) {
+			setCurrentSectionIndex(index);
+		}
+	};
 
 	function scrollTo(direction: number) {
 		let newIndex = currentSectionIndex + direction;
