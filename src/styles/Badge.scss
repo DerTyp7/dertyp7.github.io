@@ -1,0 +1,132 @@
+.badge {
+	padding: 0.2rem 0.5rem;
+	border-radius: 5px;
+	font-size: 0.8rem;
+	font-weight: 600;
+	border: 2px solid var(--color-accent-background);
+
+	&.docker {
+		background-color: #0db9ed11;
+		border-color: #0db9ed4f;
+		color: #60c6e6;
+	}
+
+	&.typescript {
+		background-color: #007acc11;
+		border-color: #007acc4f;
+		color: #007acc;
+	}
+
+	&.express {
+		background-color: #00000011;
+		border-color: #0000004f;
+		color: #000000;
+	}
+
+	&.git {
+		background-color: #f34f2999;
+		border-color: #f34f29;
+		color: #ffffff;
+	}
+
+	&.javascript {
+		background-color: #f0db4f11;
+		border-color: #f0db4f4f;
+		color: #f0db4f;
+	}
+
+	&.typeorm {
+		background-color: #42b88311;
+		border-color: #42b8834f;
+		color: #42b883;
+	}
+
+	&.firebase {
+		background-color: #ffca2811;
+		border-color: #ffca284f;
+		color: #ffca28;
+	}
+
+	&.html {
+		background-color: #e34f2611;
+		border-color: #e34f264f;
+		color: #e34f26;
+	}
+
+	&.reactjs {
+		background-color: #61dafb11;
+		border-color: #61dafb4f;
+		color: #61dafb;
+	}
+
+	&.nodejs {
+		background-color: #68a06311;
+		border-color: #68a0634f;
+		color: #68a063;
+	}
+
+	&.css {
+		background-color: #264de411;
+		border-color: #264de44f;
+		color: #264de4;
+	}
+
+	&.nextjs {
+		background-color: #00000011;
+		border-color: #0000004f;
+		color: #000000;
+	}
+
+	&.postgresql {
+		background-color: #33679111;
+		border-color: #3367914f;
+		color: #336791;
+	}
+
+	&.sass {
+		background-color: #cc669911;
+		border-color: #cc66994f;
+		color: #cc6699;
+	}
+
+	&.angularjs {
+		background-color: #e2323711;
+		border-color: #e232374f;
+		color: #e23237;
+	}
+
+	&.mysql {
+		background-color: #4479a111;
+		border-color: #4479a14f;
+		color: #4479a1;
+	}
+
+	&.java {
+		background-color: #00739611;
+		border-color: #0073964f;
+		color: #007396;
+	}
+
+	&.unity {
+		background-color: #00000011;
+		border-color: #0000004f;
+		color: #000000;
+	}
+	&.csharp {
+		background-color: #17860011;
+		border-color: #1786004f;
+		color: #178600;
+	}
+
+	&.cpp {
+		background-color: #f34b7d11;
+		border-color: #f34b7d4f;
+		color: #f34b7d;
+	}
+
+	&.python {
+		background-color: #3776ab11;
+		border-color: #3776ab4f;
+		color: #3776ab;
+	}
+}

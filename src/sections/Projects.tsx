@@ -1,32 +1,6 @@
 import "@styles/Projects.scss";
-
-enum BadgeType {
-	DOCKER = "Docker",
-	TYPESCRIPT = "TypeScript",
-	EXPRESS = "ExpressJS",
-	GIT = "Git",
-	JAVASCRIPT = "JavaScript",
-	TYPEORM = "TypeORM",
-	FIREBASE = "Firebase",
-	HTML = "HTML",
-	REACT = "ReactJS",
-	NODEJS = "NodeJS",
-	CSS = "CSS",
-	NEXTJS = "NextJS",
-	POSTGRESQL = "PostgreSQL",
-	SASS = "SASS",
-	ANGULARJS = "AngularJS",
-	MYSQL = "MySQL",
-	JAVA = "Java",
-	UNITY = "Unity",
-	CSHARP = "Csharp",
-	CPP = "Cpp",
-	PYTHON = "Python",
-}
-
-function Badge({ type }: { type: BadgeType }) {
-	return <div className={`badge ${type.toLowerCase()}`}>{type}</div>;
-}
+import Badge from "@components/Badge";
+import { BadgeType } from "@components/BadgeType";
 
 function Project({
 	name,

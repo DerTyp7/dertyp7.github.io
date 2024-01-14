@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 import "@styles/App.scss";
 import Header from "@components/Header";
-import About from "@components/About";
+import About from "@sections/About";
 import SectionScroll from "@components/SectionScroll";
-import Skills from "@components/Skills";
-import Projects from "@components/Projects";
+import Skills from "@sections/Skills";
+import Projects from "@sections/Projects";
 import SectionLine from "@components/SectionLine";
 import Footer from "@components/Footer";
 
