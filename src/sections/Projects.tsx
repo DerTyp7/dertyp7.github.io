@@ -1,6 +1,7 @@
 import "@styles/Projects.scss";
 import Badge from "@components/Badge";
 import { BadgeType } from "@components/BadgeType";
+import { useState, useEffect } from "react";
 
 function Project({
 	name,
@@ -13,10 +14,16 @@ function Project({
 	image?: string;
 	link: string;
 }) {
-	const imageUrl =
-		image ||
-		"https://source.unsplash.com/random/500x400?javascript&sig=" +
-			Math.random() * 1000;
+	const [imageUrl, setImageUrl] = useState<string | undefined>(image);
+
+	useEffect(() => {
+		if (!image) {
+			setImageUrl(
+				"https://source.unsplash.com/random/500x400?javascript&sig=" +
+					Math.random() * 1000
+			);
+		}
+	}, [image]);
 
 	return (
 		<div
