@@ -1,12 +1,30 @@
 import "@styles/About.scss";
+import { useEffect, useState } from "react";
 
 export default function About() {
+	const [job, setJob] = useState("Software Developer");
+	const jobs = ["Software Developer", "Frontend Developer", "Software Planner"];
+
+	useEffect(() => {
+		let jobIndex = 0;
+		const intervalId = setInterval(() => {
+			jobIndex = jobIndex + 1 === jobs.length ? 0 : jobIndex + 1;
+			setJob(jobs[jobIndex]);
+		}, 7000);
+
+		return () => clearInterval(intervalId); // Clean up on unmount
+	}, []);
+
 	return (
 		<div className="about">
 			<h2 className="greeting">Hey there, I'm</h2>
 			<h1 className="name">Janis Meister</h1>
 			<br />
-			<h3 className="job">Software Developer.</h3>
+			<div className="job">
+				<h3 key={job} className={`typewriter-text steps-${job.length}`}>
+					{job}
+				</h3>
+			</div>
 			<h3 className="interest">With an interest for modern technologies.</h3>
 			<div className="social-links">
 				<a href="https://github.com/DerTyp7" target="_blank">

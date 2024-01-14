@@ -1,8 +1,16 @@
 .about {
 	height: 100vh;
 	padding: 5rem 10rem;
+	display: flex;
+	flex-direction: column;
+
 	.greeting {
 		color: var(--color-accent);
+	}
+	.job {
+		display: flex;
+		align-self: flex-start;
+		text-align: left;
 	}
 	.interest {
 		color: var(--color-font-muted);
