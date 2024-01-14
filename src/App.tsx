@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import "@styles/App.scss";
 import Header from "@components/Header";
 import About from "@sections/About";
@@ -21,24 +21,7 @@ export default function App() {
 	const aboutRef = useRef(null);
 	const skillsRef = useRef(null);
 	const projectsRef = useRef(null);
-
-	const [isScrolling, setIsScrolling] = useState(false);
-
-	useEffect(() => {
-		const handleScroll = () => {
-			setIsScrolling(true);
-
-			setTimeout(() => {
-				setIsScrolling(false);
-			}, 100);
-		};
-
-		window.addEventListener("scroll", handleScroll);
-
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
-	}, []);
+	const prevHash = useRef(window.location.hash);
 
 	useEffect(() => {
 		if (isMobileDevice()) {
@@ -48,10 +31,19 @@ export default function App() {
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
-					if (isScrolling) {
-						return;
-					}
 					if (entry.isIntersecting) {
+						//! WORKAROUND: Prevents the observer from firing when the user scrolls to over a section
+						//! needs improvement in the future
+						if (
+							(prevHash.current === "#projects" &&
+								window.location.hash === "") ||
+							(prevHash.current === "#projects" &&
+								window.location.hash === "#projects")
+						) {
+							return;
+						}
+						prevHash.current = window.location.hash;
+						//! WORKAROUND END
 						window.location.hash = entry.target.id;
 						entry.target.classList.add("active");
 
@@ -67,7 +59,7 @@ export default function App() {
 					}
 				});
 			},
-			{ threshold: 0.1 }
+			{ threshold: 0.2 }
 		);
 
 		if (aboutRef.current) {
