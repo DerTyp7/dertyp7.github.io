@@ -1,0 +1,43 @@
+.sectionScroll {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	cursor: pointer;
+
+	div {
+		.arrow {
+			&.up {
+				&:hover {
+					animation: pulse 1s 2;
+				}
+
+				@media screen and (min-width: 768px) {
+					&:hover {
+						animation: pulse 1s infinite;
+					}
+				}
+			}
+
+			&.down {
+				&:hover {
+					animation: pulse 1s 2;
+				}
+			}
+			&:hover {
+				color: var(--color-accent);
+			}
+		}
+	}
+
+	@keyframes pulse {
+		0% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(1.4);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+}

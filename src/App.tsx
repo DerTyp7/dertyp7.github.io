@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import "@styles/App.scss";
 import Header from "@components/Header";
 import About from "@components/About";
-import ScrollToTop from "@components/ScrollToTop";
+import SectionScroll from "@components/SectionScroll";
 import Skills from "@components/Skills";
 import SectionLine from "@components/SectionLine";
 
@@ -68,7 +68,7 @@ export default function App() {
 			</div>
 
 			<h4>Website under construction 🚧👷</h4>
-			<ScrollToTop />
+			<SectionScroll sections={["about", "skills", "projects"]} />
 		</div>
 	);
 }
