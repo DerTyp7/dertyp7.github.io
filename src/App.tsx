@@ -6,6 +6,7 @@ import SectionScroll from "@components/SectionScroll";
 import Skills from "@components/Skills";
 import Projects from "@components/Projects";
 import SectionLine from "@components/SectionLine";
+import Footer from "@components/Footer";
 
 export default function App() {
 	const aboutRef = useRef(null);
@@ -58,6 +59,7 @@ export default function App() {
 				<Projects />
 			</div>
 
+			<Footer />
 			<SectionScroll sections={["", "skills", "projects"]} />
 		</div>
 	);
