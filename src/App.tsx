@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import "@styles/App.scss";
 import Header from "@components/Header";
 import About from "@sections/About";
