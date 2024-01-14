@@ -52,7 +52,7 @@ export default function App() {
 					}
 				});
 			},
-			{ threshold: 0.3 }
+			{ threshold: 0.5 }
 		);
 
 		const observerAnimations = new IntersectionObserver(
