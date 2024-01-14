@@ -7,6 +7,15 @@ import Skills from "@sections/Skills";
 import Projects from "@sections/Projects";
 import SectionLine from "@components/SectionLine";
 import Footer from "@components/Footer";
+import JumpToTop from "@components/JumpToTop";
+
+function isMobileDevice() {
+	return (
+		/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+			navigator.userAgent
+		) || window.innerWidth < 768
+	);
+}
 
 export default function App() {
 	const aboutRef = useRef(null);
@@ -32,6 +41,11 @@ export default function App() {
 	}, []);
 
 	useEffect(() => {
+		if (isMobileDevice()) {
+			// Don't set up the Intersection Observer on small viewports
+			return;
+		}
+
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
@@ -92,7 +106,12 @@ export default function App() {
 			</div>
 
 			<Footer />
-			<SectionScroll sections={["", "skills", "projects"]} />
+
+			{isMobileDevice() ? (
+				<JumpToTop />
+			) : (
+				<SectionScroll sections={["", "skills", "projects"]} />
+			)}
 		</div>
 	);
 }
