@@ -14,5 +14,22 @@
 			align-items: center;
 			justify-content: center;
 		}
+
+		// @keyframes slideIn {
+		// 	from {
+		// 		opacity: 0;
+		// 		transform: translateY(20px);
+		// 	}
+		// 	to {
+		// 		opacity: 1;
+		// 		transform: translateY(0);
+		// 	}
+		// }
+
+		// &.active {
+		// 	animation-name: slideIn;
+		// 	animation-duration: 1s;
+		// 	animation-fill-mode: forwards;
+		// }
 	}
 }

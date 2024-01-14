@@ -54,17 +54,17 @@ export default function Projects() {
 					name="Website"
 					description="This website"
 					link="https://github.com/DerTyp7?tab=repositories"
-				/>{" "}
+				/>
 				<Project
 					name="Website"
 					description="This website"
 					link="https://github.com/DerTyp7?tab=repositories"
-				/>{" "}
+				/>
 				<Project
 					name="Website"
 					description="This website"
 					link="https://github.com/DerTyp7?tab=repositories"
-				/>{" "}
+				/>
 				<Project
 					name="Website"
 					description="This website"

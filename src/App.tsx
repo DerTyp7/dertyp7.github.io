@@ -19,10 +19,21 @@ export default function App() {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
 						window.location.hash = entry.target.id;
+						entry.target.classList.add("active");
+
+						Array.from(entry.target.children).forEach((child) => {
+							child.classList.add("active");
+						});
+					} else {
+						entry.target.classList.remove("active");
+
+						Array.from(entry.target.children).forEach((child) => {
+							child.classList.remove("active");
+						});
 					}
 				});
 			},
-			{ threshold: 0.5 }
+			{ threshold: 0.2 }
 		);
 
 		if (aboutRef.current) {

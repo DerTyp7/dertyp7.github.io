@@ -1,8 +1,27 @@
+@keyframes slideInFromLeft {
+	0% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
 .skills {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 30px;
+
+	&.active {
+		@media (min-width: 768px) {
+			.skill {
+				animation: slideInFromLeft 300ms ease-in-out forwards;
+			}
+		}
+	}
 
 	.grid {
 		display: grid;
@@ -12,6 +31,7 @@
 		.skill {
 			display: flex;
 			flex-direction: row;
+			justify-content: center;
 			align-items: center;
 			background-color: var(--color-background-foreground);
 			border-radius: 5px;
@@ -25,7 +45,6 @@
 			// &:hover {
 			// 	border-color: var(--color-accent-background);
 			// }
-
 			img {
 				width: 32px;
 				height: 32px;

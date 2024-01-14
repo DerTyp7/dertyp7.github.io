@@ -35,6 +35,23 @@
 		}
 	}
 
+	&.active {
+		@keyframes slideIn {
+			from {
+				opacity: 0;
+				transform: translateY(20px);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		animation-name: slideIn;
+		animation-duration: 650ms;
+		animation-fill-mode: forwards;
+	}
+
 	@media (max-width: 1150px) {
 		padding: 5rem 2rem;
 	}
