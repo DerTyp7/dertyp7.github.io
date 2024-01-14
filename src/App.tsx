@@ -42,7 +42,6 @@ export default function App() {
 
 	useEffect(() => {
 		if (isMobileDevice()) {
-			// Don't set up the Intersection Observer on small viewports
 			return;
 		}
 
