@@ -16,11 +16,7 @@ export default function App() {
 			(entries) => {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
-						if (entry.target.id === "about") {
-							window.location.hash = "";
-						} else {
-							window.location.hash = entry.target.id;
-						}
+						window.location.hash = entry.target.id;
 					}
 				});
 			},
@@ -47,7 +43,7 @@ export default function App() {
 	return (
 		<div id="app">
 			<Header />
-			<div id="about" className="section" ref={aboutRef}>
+			<div className="section" ref={aboutRef}>
 				<About />
 			</div>
 
