@@ -12,7 +12,7 @@ export default function About() {
 			setJob(jobs[jobIndex]);
 		}, 7000);
 
-		return () => clearInterval(intervalId); // Clean up on unmount
+		return () => clearInterval(intervalId);
 	}, []);
 
 	return (

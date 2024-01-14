@@ -33,16 +33,10 @@ export default function App() {
 			(entries) => {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
-						// console.log("====================================");
-						// console.log(`Previous Hash: ${prevHash.current}`);
-						// console.log(`Current Hash: ${window.location.hash}`);
-						// console.log(`Target ID: ${entry.target.id}`);
-
 						const difference = Math.abs(
 							sections.indexOf(prevHash.current.replace("#", "")) -
 								sections.indexOf(window.location.hash.replace("#", ""))
 						);
-						// console.log(`Difference: ${difference}`);
 						if (difference > 1) {
 							prevHash.current = entry.target.id;
 							return;
