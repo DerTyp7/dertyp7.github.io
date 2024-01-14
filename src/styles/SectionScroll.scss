@@ -6,23 +6,10 @@
 
 	div {
 		.arrow {
-			&.up {
-				&:hover {
-					animation: pulse 1s 2;
-				}
-
-				@media screen and (min-width: 768px) {
-					&:hover {
-						animation: pulse 1s infinite;
-					}
-				}
+			&:hover {
+				animation: pulse 1s infinite;
 			}
 
-			&.down {
-				&:hover {
-					animation: pulse 1s 2;
-				}
-			}
 			&:hover {
 				color: var(--color-accent);
 			}
@@ -38,6 +25,19 @@
 		}
 		100% {
 			transform: scale(1);
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		div {
+			.arrow {
+				margin: 15px 0;
+				height: 40px;
+				width: 40px;
+				&:hover {
+					animation: none;
+				}
+			}
 		}
 	}
 }
