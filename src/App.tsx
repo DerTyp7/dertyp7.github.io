@@ -29,7 +29,7 @@ export default function App() {
 			return;
 		}
 
-		const observer = new IntersectionObserver(
+		const observerHash = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
@@ -49,6 +49,16 @@ export default function App() {
 						}
 						prevHash.current = entry.target.id;
 						window.location.hash = entry.target.id;
+					}
+				});
+			},
+			{ threshold: 0.7 }
+		);
+
+		const observerAnimations = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
 						entry.target.classList.add("active");
 
 						Array.from(entry.target.children).forEach((child) => {
@@ -63,23 +73,27 @@ export default function App() {
 					}
 				});
 			},
-			{ threshold: 0.2 }
+			{ threshold: 0.1 }
 		);
 
 		if (aboutRef.current) {
-			observer.observe(aboutRef.current);
+			observerHash.observe(aboutRef.current);
+			observerAnimations.observe(aboutRef.current);
 		}
 
 		if (skillsRef.current) {
-			observer.observe(skillsRef.current);
+			observerHash.observe(skillsRef.current);
+			observerAnimations.observe(skillsRef.current);
 		}
 
 		if (projectsRef.current) {
-			observer.observe(projectsRef.current);
+			observerHash.observe(projectsRef.current);
+			observerAnimations.observe(projectsRef.current);
 		}
 
 		return () => {
-			observer.disconnect();
+			observerHash.disconnect();
+			observerAnimations.disconnect();
 		};
 	}, []);
 
