@@ -10,7 +10,7 @@ export default function About() {
 		const intervalId = setInterval(() => {
 			jobIndex = jobIndex + 1 === jobs.length ? 0 : jobIndex + 1;
 			setJob(jobs[jobIndex]);
-		}, 7000);
+		}, 5000);
 
 		return () => clearInterval(intervalId);
 	}, []);
