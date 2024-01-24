@@ -2,11 +2,6 @@
 
 My portfolio website.
 
-Project was created with:
-
-- [Vite](https://vitejs.dev/)
-- [ReactJS](https://react.dev/)
-
 ## Project setup
 
 1. Install dependencies
